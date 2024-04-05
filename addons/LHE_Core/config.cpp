@@ -11,7 +11,7 @@ class CfgPatches
 
         weapons[]=
         {
-            "BOSLHE_Scribe_Base_Uniform"
+            "BOSLHE_Scribe_Base_Uniform",
             "BOSLHE_Field_Scribe_Uniform",
             "BOSLHE_Medical_Scribe_Uniform",
             "BOSLHE_Engineer_Scribe_Uniform",
@@ -39,7 +39,7 @@ class CfgPatches
             "BOSLHE_Knight_Base_Unit",
             "BOSLHE_Knight_NCO_Unit",
             "BOSLHE_Knight_Standard_Unit",
-            "BOSLHE_Knight_Initiate_Unit"
+            "BOSLHE_Knight_Initiate_Unit",
             "BOSLHE_Scribe_Backpack",
             "BOSLHE_Field_Scribe_Backpack"
         };
@@ -53,6 +53,7 @@ class CfgWeapons
     //Have to declare everything again bc arma 3
     class UniformItem;
     class ItemCore;
+	class Uniform_Base;
     
     //Helmets
 
@@ -104,6 +105,19 @@ class CfgWeapons
             mass = 40;
         };
     };
+	
+	class BOSLHE_Knight_Olive_Uniform: BOSLHE_Knight_Base_Uniform
+	{
+		scope = 2;
+		displayName = "[BOSLHE] Knight Uniform";
+		class ItemInfo: UniformItem
+		{
+			uniformClass = "BOSLHE_Knight_Standard_Unit";
+			uniformType = "Neopren";
+            containerClass = "Supply150";
+            mass = 40;
+		};
+	};
 
 };
 
@@ -131,6 +145,10 @@ class CfgVehicles
 		{
 
 		};
+	};
+	class BOSLHE_Field_Scribe_Backpack: BOSLHE_Scribe_Backpack
+	{
+		maximumLoad = 1000;
 	};
     //Scribe Uniforms + Lancer-Captain Uniform
     class BOSLHE_Scribe_Base_Unit: B_soldier_base_F
@@ -183,11 +201,11 @@ class CfgVehicles
         items[]=
         {
 
-        }
+        };
         respawnItems[]=
         {
 
-        }
+        };
 		class HitPoints: HitPoints
 		{
 		class HitFace
@@ -386,13 +404,14 @@ class CfgVehicles
 		scopeCurator = 0;
         displayName = "[BOSLHE] Knight Base Unit (Dev)";
         editorPreview = "LHE_Core\data\ui\editorPreviews\KnightInitiateEditorPreview.paa";
-        faction = "BOSLHE_Faction";
+        model = "\LHE_Core\data\models\uniforms\undersuittest.p3d";
+		faction = "BOSLHE_Faction";
         editorSubcategory = "EdSubcat_Personnel";
         backpack = "";
         uniformClass = "BOSLHE_Knight_Base_Uniform";
         hiddenSelections[]=
         {
-
+			"camo"
         };
         hiddenSelectionsTextures[]=
         {
@@ -400,15 +419,15 @@ class CfgVehicles
         };
 		hiddenSelectionsMaterials[]=
 		{
-
+			"\LHE_Core\data\textures\uniforms\undersuit.rvmat"
 		};
         linkedItems[]=
         {
-            "BOSLHE_Combat_Helmet";
+            "BOSLHE_Combat_Helmet",
         };
         respawnLinkedItems[]=
         {
-            "BOSLHE_Combat_Helmet";
+            "BOSLHE_Combat_Helmet",
         };
         weapons[]=
         {
@@ -429,11 +448,11 @@ class CfgVehicles
         items[]=
         {
 
-        }
+        };
         respawnItems[]=
         {
 
-        }
+        };
 		class HitPoints: HitPoints
 		{
 		class HitFace
@@ -608,7 +627,7 @@ class CfgVehicles
 		explosionShielding=0.40000001;
 		minTotalDamageThreshold=0.001;
 		impactDamageMultiplier=0.5;
-	}
+	};
 	class BOSLHE_Knight_NCO_Unit: BOSLHE_Knight_Base_Unit
 	{
 		scope = 2;
@@ -625,7 +644,25 @@ class CfgVehicles
 	class BOSLHE_Knight_Initiate_Unit: BOSLHE_Knight_Base_Unit
 	{
 		scope = 2;
-	}
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "[BOSLHE] Knight Initiate";
+		editorPreview = "";
+		uniformClass = "BOSLHE_Knight_Orange_Uniform";
+	};
+	class BOSLHE_Knight_Standard_Unit: BOSLHE_Knight_Base_Unit
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "[BOSLHE] Knight Initiate";
+		editorPreview = "";
+		uniformClass = "BOSLHE_Knight_Olive_Uniform";
+		hiddenSelectionsTextures[]=
+		{
+			"\LHE_Core\data\textures\uniforms\oliveundersuit.paa"
+		};
+	};
 };
 
 class CfgFactionClasses
