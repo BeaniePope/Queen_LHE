@@ -6,7 +6,7 @@ class CfgPatches
         author = "Queen";
         requiredAddons[]=
         {
-            "fallout_uniform_03"
+
         };
 
         weapons[]=
