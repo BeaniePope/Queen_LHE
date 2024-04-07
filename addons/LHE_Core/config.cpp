@@ -37,7 +37,7 @@ class CfgPatches
             "BOSLHE_Engineer_Scribe_Unit",
             "BOSLHE_Lancer_Captain_Unit",
             "BOSLHE_Knight_Base_Unit",
-            "BOSLHE_Knight_NCO_Unit",
+            "BOSLHE_Knight_Officer_Unit",
             "BOSLHE_Knight_Standard_Unit",
             "BOSLHE_Knight_Initiate_Unit",
             "BOSLHE_Scribe_Backpack",
@@ -65,12 +65,12 @@ class CfgWeapons
         author = "Queen";
         scope = 0;
         displayName = "[BOSLHE] Scribe Base Uniform (Dev)";
-		model = "\BOSLHE\data\models\statics\ScribeUniformItem.p3d";
+		//model = "\BOSLHE\data\models\statics\ScribeUniformItem.p3d";
         class ItemInfo: UniformItem
         {
             uniformClass = "BOSLHE_Scribe_Base_Unit";
             uniformType = "Neopren";
-            containerClass = "Supply200"
+            containerClass = "Supply200";
             mass = 40;
         };
     };
@@ -118,6 +118,30 @@ class CfgWeapons
             mass = 40;
 		};
 	};
+	class BOSLHE_Knight_Black_Uniform: BOSLHE_Knight_Base_Uniform
+	{
+		scope = 2;
+		displayName = "[BOSLHE] Knight Officer Uniform";
+		class ItemInfo: UniformItem
+		{
+			uniformClass = "BOSLHE_Knight_Officer_Unit";
+			uniformType = "Neopren";
+            containerClass = "Supply150";
+            mass = 40;
+		};
+	};
+	class BOSLHE_Knight_Initiate_Uniform: BOSLHE_Knight_Base_Uniform
+	{
+		scope = 2;
+		displayName = "[BOSLHE] Knight Initiate Uniform";
+		class ItemInfo: UniformItem
+		{
+			uniformClass = "BOSLHE_Knight_Initiate_Unit";
+			uniformType = "Neopren";
+            containerClass = "Supply150";
+            mass = 40;
+		};
+	};
 
 };
 
@@ -133,8 +157,8 @@ class CfgVehicles
 		author = "Queen";
 		scope = 2;
 		displayName = "[BOSLHE] Scribe Backpack";
-		picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
-		model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackmModel.p3d";
+		//picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
+		//model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackmModel.p3d";
 		maximumLoad = 200;
 		mass = 40;
 		hiddenSelections[]=
@@ -156,12 +180,12 @@ class CfgVehicles
         author = "Queen";
         scope = 0;
         displayName = "[BOSLHE] Scribe Base Unit (Dev)";
-        editorPreview = "LHE_Core\data\ui\editorPreviews\FieldScribeEditorPreview.png";
+        //editorPreview = "LHE_Core\data\ui\editorPreviews\FieldScribeEditorPreview.png";
         faction = "BOSLHE_Faction";
         editorSubcategory = "EdSubcat_Personnel";
         backpack = "";
         uniformClass = "BOSLHE_Scribe_Base_Uniform";
-		model = "\BOSLHE\data\models\uniforms\ScribeUniform.p3d";
+		//model = "\BOSLHE\data\models\uniforms\ScribeUniform.p3d";
         hiddenSelections[]=
         {
 
@@ -176,11 +200,11 @@ class CfgVehicles
 		};
         linkedItems[]=
         {
-            "BOSLHE_Scribe_Helmet";
+            "BOSLHE_Scribe_Helmet",
         };
         respawnLinkedItems[]=
         {
-            "BOSLHE_Scribe_Helmet";
+            "BOSLHE_Scribe_Helmet",
         };
         weapons[]=
         {
@@ -387,7 +411,7 @@ class CfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		displayName = "[BOSLHE] Field Scribe";
-		editorPreview = "\LHE_Core\data\ui\editorPreviews\FieldScribeEditorPreview.paa";
+		//editorPreview = "\LHE_Core\data\ui\editorPreviews\FieldScribeEditorPreview.paa";
 		uniformClass = "BOSLHE_Field_Scribe_Uniforms";
 		hiddenSelectionsTextures[]=
 		{
@@ -403,8 +427,8 @@ class CfgVehicles
 		scopeArsenal = 0;
 		scopeCurator = 0;
         displayName = "[BOSLHE] Knight Base Unit (Dev)";
-        editorPreview = "LHE_Core\data\ui\editorPreviews\KnightInitiateEditorPreview.paa";
-        model = "\LHE_Core\data\models\uniforms\undersuittest.p3d";
+        //editorPreview = "LHE_Core\data\ui\editorPreviews\KnightInitiateEditorPreview.paa";
+        model = "\LHE_Core\models\KnightUndersuit.p3d";
 		faction = "BOSLHE_Faction";
         editorSubcategory = "EdSubcat_Personnel";
         backpack = "";
@@ -419,7 +443,7 @@ class CfgVehicles
         };
 		hiddenSelectionsMaterials[]=
 		{
-			"\LHE_Core\data\textures\uniforms\undersuit.rvmat"
+			"\LHE_Core\data\textures\uniforms\KnightUndersuit.rvmat"
 		};
         linkedItems[]=
         {
@@ -628,17 +652,17 @@ class CfgVehicles
 		minTotalDamageThreshold=0.001;
 		impactDamageMultiplier=0.5;
 	};
-	class BOSLHE_Knight_NCO_Unit: BOSLHE_Knight_Base_Unit
+	class BOSLHE_Knight_Officer_Unit: BOSLHE_Knight_Base_Unit
 	{
 		scope = 2;
 		scopeArsenal = 2;
 		scopeCurator = 2;
-		displayName = "[BOSLHE] Knight NCO";
-		editorPreview = "\LHE_Core\data\ui\editorPreviews\KnightNCOEditorPreview.paa";
+		displayName = "[BOSLHE] Knight Officer";
+		//editorPreview = "\LHE_Core\data\ui\editorPreviews\KnightOfficerEditorPreview.paa";
 		uniformClass = "BOSLHE_Knight_Black_Uniform";
 		hiddenSelectionsTextures[]=
 		{
-
+			"\LHE_Core\data\textures\uniforms\Black\KnightUndersuit.paa"
 		};	
 	};
 	class BOSLHE_Knight_Initiate_Unit: BOSLHE_Knight_Base_Unit
@@ -647,8 +671,12 @@ class CfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		displayName = "[BOSLHE] Knight Initiate";
-		editorPreview = "";
+		//editorPreview = "";
 		uniformClass = "BOSLHE_Knight_Orange_Uniform";
+		hiddenSelectionsTextures[]=
+		{
+			"\LHE_Core\data\textures\uniforms\Orange\KnightUndersuit.paa"
+		};
 	};
 	class BOSLHE_Knight_Standard_Unit: BOSLHE_Knight_Base_Unit
 	{
@@ -656,13 +684,14 @@ class CfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		displayName = "[BOSLHE] Knight Initiate";
-		editorPreview = "";
+		//editorPreview = "";
 		uniformClass = "BOSLHE_Knight_Olive_Uniform";
 		hiddenSelectionsTextures[]=
 		{
-			"\LHE_Core\data\textures\uniforms\oliveundersuit.paa"
+			"\LHE_Core\data\textures\uniforms\Olive\KnightUndersuit.paa"
 		};
 	};
+
 };
 
 class CfgFactionClasses
