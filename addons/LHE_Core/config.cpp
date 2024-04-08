@@ -4,11 +4,11 @@ class CfgPatches
     {
         name = "Queen LHE Core";
         author = "Queen";
-        requiredAddons[]=
-        {
-			"characters_f"
+        requiredVersion = 0.1;
+        requiredAddons[] = 
+		{
+            "A3_Data_F_Mod_Loadorder"
         };
-
         weapons[]=
         {
             "BOSLHE_Scribe_Base_Uniform",
@@ -43,9 +43,7 @@ class CfgPatches
             "BOSLHE_Scribe_Backpack",
             "BOSLHE_Field_Scribe_Backpack"
         };
-
-
-    };
+	};
 };
 
 class CfgWeapons
@@ -691,7 +689,6 @@ class CfgVehicles
 			"\LHE_Core\data\textures\uniforms\Olive\KnightUndersuit_co.paa"
 		};
 	};
-
 };
 
 class CfgFactionClasses
@@ -701,7 +698,6 @@ class CfgFactionClasses
 		displayName = "[BOSLHE] Brotherhood Expedition";
 	};
 };
-
 class CfgEditorSubcategories
 {
 	class BOSLHE_Characters
