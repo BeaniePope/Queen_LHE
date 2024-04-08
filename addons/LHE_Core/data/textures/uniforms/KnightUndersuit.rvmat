@@ -1,7 +1,3 @@
-class StageTI
-{
-	texture="BOSLHE\data\textures\uniforms\oliveundersuit_smdi.paa";
-};
 ambient[]={1,1,1,1};
 diffuse[]={1,1,1,1};
 forcedDiffuse[]={0,0,0,0};
@@ -12,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="\LHE_Core\data\textures\uniforms\Shared\KnightUndersuit_nohq.paa";
+	texture="LHE_Core\data\textures\uniforms\Shared\KnightUndersuit_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -48,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="\LHE_Core\data\textures\uniforms\Shared\KnightUndersuit_as.paa";
+	texture="LHE_Core\data\textures\uniforms\Shared\KnightUndersuit_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -60,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="\LHE_Core\data\textures\uniforms\Shared\KnightUndersuit_smdi.paa";
+	texture="LHE_Core\data\textures\uniforms\Shared\KnightUndersuit_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{

@@ -6,7 +6,7 @@ class CfgPatches
         author = "Queen";
         requiredAddons[]=
         {
-
+			"characters_f"
         };
 
         weapons[]=
