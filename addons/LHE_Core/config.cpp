@@ -426,7 +426,7 @@ class CfgVehicles
 		scopeCurator = 0;
         displayName = "[BOSLHE] Knight Base Unit (Dev)";
         //editorPreview = "LHE_Core\data\ui\editorPreviews\KnightInitiateEditorPreview.paa";
-        model = "LHE_Core\models\KnightUndersuit.p3d";
+        model = "\LHE_Core\models\KnightUndersuit.p3d";
 		faction = "BOSLHE_Faction";
         editorSubcategory = "EdSubcat_Personnel";
         backpack = "";
@@ -441,7 +441,7 @@ class CfgVehicles
         };
 		hiddenSelectionsMaterials[]=
 		{
-			"LHE_Core\data\textures\uniforms\KnightUndersuit.rvmat"
+			"\LHE_Core\data\textures\uniforms\KnightUndersuit.rvmat"
 		};
         linkedItems[]=
         {
