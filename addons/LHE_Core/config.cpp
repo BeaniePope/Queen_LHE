@@ -73,7 +73,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\LHE_Core\models\CombatArmor";
+			uniformModel = "\LHE_Core\models\CombatArmor.p3d";
 			containerClass = "Supply80";
 			mass = 15;
 		};
