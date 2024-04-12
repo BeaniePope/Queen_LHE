@@ -56,11 +56,61 @@ class CfgWeapons
     //Helmets
 
     //Vests
+	class BOSLHE_CombatArmor_Base_Vest: ItemCore
+	{
+		author = "Lost Hills Mod Team";
+		scope = 0;
+		displayName = "[BOSLHE] Scribe Base Uniform (Dev)";
+		hiddenSelections[] =
+		{
+			"camoArms",
+			"camoLegs",
+			"camoTorso",
+			"camoInsignia"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\LHE_Core\models\CombatArmor";
+			containerClass = "Supply80";
+			mass = 15;
+		};
+		class HitpointsProtectionInfo
+		{
+			class Chest
+			{
+				hitpointname = "HitChest";
+				armor = 16;
+				passThrough = .5;
+			};
+			class Arms
+			{
+				hitpointname = "HitArms";
+				armor = 8;
+				passThrough = .5;
+			};
+		};
+	};
+
+	class BOSLHE_CombatArmor_Black_Vest: ItemCore
+	{
+		author = "Lost Hills Mod Team";
+		scope = 2;
+		hiddenSelectionsTextures[] = 
+		{
+			"\LHE_Core\data\textures\vests\Black\CombatArmorArms_co.paa";
+			"\LHE_Core\data\textures\vests\Black\CombatArmorLegs_co.paa";
+			"\LHE_Core\data\textures\vests\Black\CombatArmorTorso_co.paa";
+			"\LHE_Core\data\textures\vests\Shared\CombatArmorInsignia_co.paa";
+		};
+	};
 
     //Scribe Uniforms + Lancer Captain
     class BOSLHE_Scribe_Base_Uniform: Uniform_Base
     {
-        author = "Queen";
+        author = "Lost Hills Mod Team";
         scope = 0;
         displayName = "[BOSLHE] Scribe Base Uniform (Dev)";
 		//model = "\BOSLHE\data\models\statics\ScribeUniformItem.p3d";
@@ -92,7 +142,7 @@ class CfgWeapons
     //Knight Uniforms
     class BOSLHE_Knight_Base_Uniform: Uniform_Base
     {
-        author = "Queen";
+        author = "Lost Hills Mod Team";
         scope = 0;
         displayName = "[BOSLHE] Knight Base Uniform (Dev)";
         class ItemInfo: UniformItem
