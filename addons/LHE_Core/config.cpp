@@ -156,7 +156,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "[BOSLHE] Scribe Backpack";
 		//picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
-		//model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackmModel.p3d";
+		//model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackModel.p3d";
 		maximumLoad = 200;
 		mass = 40;
 		hiddenSelections[]=
@@ -175,7 +175,7 @@ class CfgVehicles
     //Scribe Uniforms + Lancer-Captain Uniform
     class BOSLHE_Scribe_Base_Unit: B_soldier_base_F
     {
-        author = "Queen";
+        author = "Lost Hills Mod Team";
         scope = 0;
         displayName = "[BOSLHE] Scribe Base Unit (Dev)";
         //editorPreview = "LHE_Core\data\ui\editorPreviews\FieldScribeEditorPreview.png";
@@ -420,7 +420,7 @@ class CfgVehicles
     //Knight Uniforms
 	class BOSLHE_Knight_Base_Unit: B_soldier_base_F
 	{
-        author = "Queen";
+        author = "Lost Hills Mod Team";
         scope = 0;
 		scopeArsenal = 0;
 		scopeCurator = 0;
@@ -704,4 +704,21 @@ class CfgEditorSubcategories
 	{
 		displayName = "Characters";
 	};	
+};
+
+class CfgMarkers
+{
+   class flag;
+   class BOSSP_Marker: flag
+   {
+		scope = 2; 
+		name = "BOSSP Emblem"; 
+		icon = "\LHE_Core\data\ui\markers\BOSSPMarker.png"; 
+		texture = "\LHE_Core\data\ui\markers\BOSSPMarker.png"; 
+		side = 2; 
+		shadow = 0; 
+		color[] = { 0, 0, 0, 1 }; 
+		size = 32; 
+		showEditorMarkerColor = 1;
+   };
 };
