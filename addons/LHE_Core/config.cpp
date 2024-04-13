@@ -7,7 +7,8 @@ class CfgPatches
         requiredVersion = 0.1;
         requiredAddons[] = 
 		{
-            "A3_Data_F_Mod_Loadorder"
+            "A3_Data_F_Mod_Loadorder",
+			"characters_f"
         };
         weapons[]=
         {
@@ -52,6 +53,8 @@ class CfgWeapons
     class UniformItem;
     class ItemCore;
 	class Uniform_Base;
+	class VestItem;
+	class ItemInfo;
     
     //Helmets
 
@@ -60,6 +63,9 @@ class CfgWeapons
 	{
 		author = "Lost Hills Mod Team";
 		scope = 0;
+		scopeArsenal = 0;
+		scopeCurator = 0;
+		allowedSlots[] = { 901 };
 		displayName = "[BOSLHE] Scribe Base Uniform (Dev)";
 		hiddenSelections[] =
 		{
@@ -94,10 +100,11 @@ class CfgWeapons
 		};
 	};
 
-	class BOSLHE_CombatArmor_Black_Vest: ItemCore
+	class BOSLHE_CombatArmor_Black_Vest: BOSLHE_CombatArmor_Base_Vest
 	{
-		author = "Lost Hills Mod Team";
 		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
 		hiddenSelectionsTextures[] = 
 		{
 			"\LHE_Core\data\textures\vests\Black\CombatArmorArms_co.paa";
