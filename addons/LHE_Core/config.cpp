@@ -1,9 +1,9 @@
 class CfgPatches
 {
-    class Queen_LHE_Core
+    class LHE_Core
     {
-        name = "Queen LHE Core";
-        author = "Queen";
+        name = "LHE Core";
+        author = "Lost Hills Mod Team";
         requiredVersion = 0.1;
         requiredAddons[] = 
 		{
@@ -59,6 +59,20 @@ class CfgWeapons
     //Helmets
 
     //Vests
+	class BOSLHE_Field_Scribe_Inventory: ItemCore
+	{
+		author = "Lost Hills Mod Team";
+		scope = 2; 
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		maximumLoad = 600;
+		allowedSlots[] = { 901 };
+		displayName = "[BOSSP] Field Scribe Inventory";
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+		};
+	};
 	class BOSLHE_CombatArmor_Base_Vest: ItemCore
 	{
 		author = "Lost Hills Mod Team";
@@ -225,10 +239,7 @@ class CfgVehicles
 
 		};
 	};
-	class BOSLHE_Field_Scribe_Backpack: BOSLHE_Scribe_Backpack
-	{
-		maximumLoad = 1000;
-	};
+
     //Scribe Uniforms + Lancer-Captain Uniform
     class BOSLHE_Scribe_Base_Unit: B_soldier_base_F
     {
