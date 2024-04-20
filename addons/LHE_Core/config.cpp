@@ -8,7 +8,8 @@ class CfgPatches
         requiredAddons[] = 
 		{
             "A3_Data_F_Mod_Loadorder",
-			"characters_f"
+			"characters_f",
+			"heads"
         };
         weapons[]=
         {
@@ -781,8 +782,8 @@ class CfgMarkers
    {
 		scope = 2; 
 		name = "BOSSP Emblem"; 
-		icon = "\LHE_Core\data\ui\markers\BOSSPMarker.png"; 
-		texture = "\LHE_Core\data\ui\markers\BOSSPMarker.png"; 
+		icon = "\LHE_Core\data\ui\markers\BOSSPMarker.paa"; 
+		texture = "\LHE_Core\data\ui\markers\BOSSPMarker.paa"; 
 		side = 2; 
 		shadow = 0; 
 		color[] = { 0, 0, 0, 1 }; 
