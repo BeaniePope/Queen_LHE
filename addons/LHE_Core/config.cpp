@@ -8,7 +8,6 @@ class CfgPatches
         requiredAddons[] = 
 		{
             "A3_Data_F_Mod_Loadorder",
-			"characters_f",
 			"heads"
         };
         weapons[]=
@@ -22,6 +21,8 @@ class CfgPatches
             "BOSLHE_Knight_Black_Uniform",
             "BOSLHE_Knight_Olive_Uniform",
             "BOSLHE_Knight_Orange_Uniform",
+			"BOSLHE_Field_Scribe_Inventory",
+			"BOSLHE_CombatArmor_Base_Vest",
             "BOSLHE_CombatArmor_Black_Vest",
             "BOSLHE_CombatArmor_Blue_Vest",
             "BOSLHE_CombatArmor_Desert_Vest",
@@ -66,7 +67,8 @@ class CfgWeapons
 		scope = 2; 
 		scopeArsenal = 2;
 		scopeCurator = 2;
-		maximumLoad = 600;
+		//maximumLoad = 600;
+		model = "";
 		allowedSlots[] = { 901 };
 		displayName = "[BOSSP] Field Scribe Inventory";
 		class ItemInfo: ItemInfo
@@ -91,6 +93,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[] = 
 		{
+		};
+		hiddenSelectionsMaterials[] = 
+		{
+			""
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -122,10 +128,10 @@ class CfgWeapons
 		scopeCurator = 2;
 		hiddenSelectionsTextures[] = 
 		{
-			"\LHE_Core\data\textures\vests\Black\CombatArmorArms_co.paa";
-			"\LHE_Core\data\textures\vests\Black\CombatArmorLegs_co.paa";
-			"\LHE_Core\data\textures\vests\Black\CombatArmorTorso_co.paa";
-			"\LHE_Core\data\textures\vests\Shared\CombatArmorInsignia_co.paa";
+			"\LHE_Core\data\textures\vests\Black\CombatArmorArms_co.paa",
+			"\LHE_Core\data\textures\vests\Black\CombatArmorLegs_co.paa",
+			"\LHE_Core\data\textures\vests\Black\CombatArmorTorso_co.paa",
+			"\LHE_Core\data\textures\vests\Shared\CombatArmorInsignia_co.paa"
 		};
 	};
 
@@ -227,8 +233,8 @@ class CfgVehicles
 		author = "Queen";
 		scope = 2;
 		displayName = "[BOSLHE] Scribe Backpack";
-		//picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
-		//model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackModel.p3d";
+		picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
+		model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackModel.p3d";
 		maximumLoad = 200;
 		mass = 40;
 		hiddenSelections[]=
