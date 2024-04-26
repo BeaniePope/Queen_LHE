@@ -7,8 +7,7 @@ class CfgPatches
         requiredVersion = 0.1;
         requiredAddons[] = 
 		{
-            "A3_Data_F_Mod_Loadorder",
-			"heads"
+            "A3_Data_F_Mod_Loadorder"
         };
         weapons[]=
         {
@@ -731,7 +730,7 @@ class CfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		displayName = "[BOSLHE] Knight Officer";
-		//editorPreview = "\LHE_Core\data\ui\editorPreviews\KnightOfficerEditorPreview.paa";
+		editorPreview = "\LHE_Core\data\ui\editorPreviews\BlackPreviewImage_ca.paa";
 		uniformClass = "BOSLHE_Knight_Black_Uniform";
 		hiddenSelectionsTextures[]=
 		{
