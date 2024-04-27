@@ -82,7 +82,7 @@ class CfgWeapons
 		scopeArsenal = 0;
 		scopeCurator = 0;
 		allowedSlots[] = { 901 };
-		displayName = "[BOSLHE] Scribe Base Uniform (Dev)";
+		displayName = "[BOSLHE] Knight Base Armor (Dev)";
 		hiddenSelections[] =
 		{
 			"camoArms",
@@ -125,12 +125,19 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		scopeCurator = 2;
+		displayName = "[TSP] Black Combat Armor";
 		hiddenSelectionsTextures[] = 
 		{
 			"\LHE_Core\data\textures\vests\Black\CombatArmorArms_co.paa",
 			"\LHE_Core\data\textures\vests\Black\CombatArmorLegs_co.paa",
 			"\LHE_Core\data\textures\vests\Black\CombatArmorTorso_co.paa",
 			"\LHE_Core\data\textures\vests\Shared\CombatArmorInsignia_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\LHE_Core\models\CombatArmor.p3d";
+			containerClass = "Supply80";
+			mass = 15;
 		};
 	};
 
