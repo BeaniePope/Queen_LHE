@@ -5,7 +5,6 @@ class CfgPatches
         requiredaddons[] = 
         {
             "A3_Functions_F",
-			"ace_main"
         };
 		units[] = {};
 		weapons[] = {};
@@ -14,17 +13,17 @@ class CfgPatches
 };
 
 
-class CfgMovesBasic; // Reference CfgMovesBasic. 
-class CfgMovesMaleSdr : CfgMovesBasic // Override CfgMovesMaleSdr
+/* class CfgMovesBasic; // Reference CfgMovesBasic. 
+class CfgMovesMaleSdr: CfgMovesBasic // Override CfgMovesMaleSdr
 {
 	skeletonName="OFP2_ManSkeleton";
 	gestures="CfgGesturesMale";
 	class States
 	{
 		class CutSceneAnimationBaseSit;
-		class BOSSalute: CutSceneAnimationBaseSit
+		class LHESalute: CutSceneAnimationBaseSit
 		{
-			looped = 0; // turn in loop or not
+			looped = 1; // turn in loop or not
 			speed = -5; // duration of your animation in seconds * -1 
 			file = "\LHE_Animations\data\BrotherhoodSalute.rtm"; // your animation path
 			canBlendStep = 0; // sliding effect on/off
@@ -32,20 +31,11 @@ class CfgMovesMaleSdr : CfgMovesBasic // Override CfgMovesMaleSdr
 			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon", 2}; // next animation after this one
 		};
 	};
-};
-
-class Extended_PreInit_EventHandlers
-{
-    class LHE_Preinit
-    {
-        init="call compile preprocessFileLineNumbers '\LHE_Animations\XEH_preInit.sqf'";
-    };
-};
-
-// Register a simple keypress to an action
+}; */
 
 
-/* class CfgMovesBasic // This defines the animation names so they may be retrieved by scripts.
+
+class CfgMovesBasic // This defines the animation names so they may be retrieved by scripts.
 {
     class default;
  	class DefaultDie;
@@ -70,4 +60,12 @@ class CfgGesturesMale // This defines what file the animation is and the specifi
  		};
 	};
 
- }; */
+ };
+ 
+class Extended_PreInit_EventHandlers
+{
+    class LHE_Preinit
+    {
+        init="call compile preprocessFileLineNumbers '\LHE_Animations\XEH_preInit.sqf'";
+    };
+};
