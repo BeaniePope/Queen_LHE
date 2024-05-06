@@ -242,8 +242,8 @@ class CfgVehicles
 		author = "Queen";
 		scope = 2;
 		displayName = "[BOSLHE] Scribe Backpack";
-		picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
-		model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackModel.p3d";
+		//picture = "\BOSLHE_Core\data\ui\pictures\ScribeBackpackPicture.paa";
+		//model = "\BOSLHE_Core\data\models\backpacks\ScribeBackpackModel.p3d";
 		maximumLoad = 200;
 		mass = 40;
 		hiddenSelections[]=
@@ -740,7 +740,7 @@ class CfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		displayName = "[BOSLHE] Knight Officer";
-		editorPreview = "\LHE_Core\data\ui\editorPreviews\BlackPreviewImage_ca.paa";
+		//editorPreview = "\LHE_Core\data\ui\editorPreviews\BlackPreviewImage_ca.paa";
 		uniformClass = "BOSLHE_Knight_Black_Uniform";
 		hiddenSelectionsTextures[]=
 		{
