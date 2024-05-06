@@ -92,13 +92,13 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			""
+			
 		};
 		hiddenSelectionsMaterials[] = 
 		{
-			"LHE_Core\data\vests\CombatArmor_Arm.rvmat",
-			"LHE_Core\data\vests\CombatArmor_Leg.rvmat",
-			"LHE_Core\data\vests\CombatArmor_Torso.rvmat"
+			"\LHE_Core\data\textures\vests\CombatArmor_Arm.rvmat",
+			"\LHE_Core\data\textures\vests\CombatArmor_Leg.rvmat",
+			"\LHE_Core\data\textures\vests\CombatArmor_Torso.rvmat"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -134,7 +134,7 @@ class CfgWeapons
 			"\LHE_Core\data\textures\vests\Black\CombatArmorArms_co.paa",
 			"\LHE_Core\data\textures\vests\Black\CombatArmorLegs_co.paa",
 			"\LHE_Core\data\textures\vests\Black\CombatArmorTorso_co.paa",
-			"\LHE_Core\data\textures\vests\Shared\CombatArmorInsignia_BoS_co.paa"
+			"\LHE_Core\data\textures\vests\BoS\CombatArmorInsignia_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
