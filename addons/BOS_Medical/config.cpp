@@ -127,6 +127,7 @@ class CfgWeapons
         displayName = "[BOS] Super Stimpak";
         picture = "\BOS_Medical\data\ui\superstimpak.paa";
         models = "\BOS_Medical\models\superstimpak.p3d";
+        ACE_isMedicalItem = 1;
         class itemInfo: CBA_MiscItem_ItemInfo
         {
             mass = 0.2;
@@ -134,9 +135,10 @@ class CfgWeapons
     };
     class BOS_Mysterious_Jar_Item: ACE_ItemCore
     {
-        scope=1;
+        scope = 2;
 		author="Queen";
 		displayName="[BOS] Mysterious Jar Item";
+
 		class ItemInfo: CBA_MiscItem_ItemInfo
 		{
 			mass=0;
@@ -159,7 +161,7 @@ class CfgVehicles
     class WeaponHolder_Single_limited_item_F;
     class BOS_Coyote_Chew_Item: WeaponHolder_Single_limited_item_F
 	{
-		scope=2;
+		scope = 1;
 		scopeCurator=2;
 		displayName="[BOS] Coyote Chew Bundle";
 		author="Katalam";
@@ -382,7 +384,7 @@ class ACE_Medical_Treatment_Actions
 		};
 		condition="true";
 		patientStateCondition=0;
-		callbackSuccess="[_player, _patient, 'Naloxone'] call aceP_circulation_fnc_treatmentAdvanced_Naloxone";
+		callbackSuccess="[_player, _patient, 'Fixer'] call BOS_Medical_fnc_treatmentAdvanced_Fixer";
 
     };
     class Super_Stimpak: Mysterious_Jar
@@ -459,7 +461,7 @@ class ACE_Medical_Advanced
 
     };
 };
-
+/*
 class Extended_PostInit_EventHandlers
 {
 	class BOS_Medical
@@ -468,11 +470,4 @@ class Extended_PostInit_EventHandlers
 	};
 };
 
-class Extended_PreInit_EventHandlers
-{
-	class BOS_Medical
-	{
-		init="call compile preProcessFileLineNumbers '\BOS_Medical\XEH_preInit.sqf'";
-		disableModuload="true";
-	};
-};
+*/
