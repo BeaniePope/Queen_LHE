@@ -5,7 +5,6 @@ class cfgPatches
         author = "Queen";
         requiredAddons[] =
         {
-            "aceP_circulation",
             "ace_medical",
 			"ace_medical_ai",
 			"ace_medical_blood",
